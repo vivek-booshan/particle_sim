@@ -70,6 +70,9 @@ int main() {
     //Point points[] = {{2, 4}, {5, 4}, {9, 4}, {4, 4}, {8, 4}};
     //Point points[] = {{0, 0}, {0,0}, {0, 0}, {0, 0}, {0, 0}};
     //Point points[] = {{99999999, 999999999}, {99999999, 999999999}, {0, 0.000002}, {0, 0.0000001}, {0, 0.0000001}};
+
+    //Just trying some stuff out :)
+    
     Point points[] = {{2, 3}, {5, 4}, {9, 6}, {4, 7}, {8, 1}};
     int n = sizeof(points) / sizeof(points[0]);
     
