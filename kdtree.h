@@ -7,7 +7,20 @@
 #include <math.h>
 #include <time.h>
 
+#define DIM 2
+typedef struct kdNode_t {
+    float x[DIM];
+    struct kdNode_t *left, *right;
+} kdNode_t;
+
+inline float dist(kdNode_t *a, kdNode_t *b);
+inline void swap(kdNode_t *x, kdNode_t *y);
+kdNode_t *find_median(kdNode_t *start, kdNode_t *end, int idx);
+kdNode_t *make_tree(kdNode_t *t, int len, int i, int dim);
+void nearest(kdNode_t *root, kdNode_t *nd, int i, int dim, kdNode_t **best, double *best_dist);
+
 #ifdef KDTREE_IMPLEMENTATION
+
 inline float dist(kdNode_t *a, kdNode_t *b)
 {
     #if DIM == 2
